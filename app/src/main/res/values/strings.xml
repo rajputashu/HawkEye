@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">HawkEye</string>
+    <string name="navigation_item_1">Title </string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+</resources>
