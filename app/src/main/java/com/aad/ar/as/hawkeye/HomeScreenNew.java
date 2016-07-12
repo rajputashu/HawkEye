@@ -71,9 +71,6 @@ public class HomeScreenNew extends AppCompatActivity implements OnMapReadyCallba
 //        mCollapsingToolbarLayout.setTitle(getResources().getString(R.string.app_name));
 
 
-
-
-
     }
 
     @Override
@@ -101,7 +98,7 @@ public class HomeScreenNew extends AppCompatActivity implements OnMapReadyCallba
     @Override
     public void onHomeListItemClick(int position) {
 
-        Log.e("HawkLog", "ClickEvent " + position);
+//        Log.e("HawkLog", "ClickEvent " + position);
 
     }
 }
