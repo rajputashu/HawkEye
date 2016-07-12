@@ -7,61 +7,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.aad.ar.as.hawkeye.models.Information;
+
 import java.util.ArrayList;
 
 /**
  * Created by cirmac3 on 7/11/16.
  */
 public class HomeRecyclerView extends RecyclerView.Adapter<HomeRecyclerView.ARRecyclerViewHolder> {
-    private ArrayList<String> list = new ArrayList<>();
+//    private ArrayList<String> list = new ArrayList<>();
     private LayoutInflater inflater;
     private static HomeItemClickListener listener;
+    private ArrayList<Information> infoList;
 
-    public HomeRecyclerView(Context context) {
+    public HomeRecyclerView(Context context,ArrayList<Information> infoList) {
         inflater = LayoutInflater.from(context);
-        list.add("A-Bomb (HAS)");
-        list.add("A.I.M.");
-        list.add("Abe");
-        list.add("Abin");
-        list.add("Abomination");
-        list.add("Abraxas");
-        list.add("Absorbing");
-        list.add("Adam");
-        list.add("Agent Bob");
-        list.add("Agent Zero");
-        list.add("Air Walker");
-        list.add("Ajax");
-        list.add("Alan Scott");
-        list.add("Alex Mercer");
-        list.add("Alex Woolsly");
-        list.add("Alfred Pennyworth");
-        list.add("Allan Quartermain");
-        list.add("Amazo");
-        list.add("Ammo Ando");
-        list.add("Masahashi Angel");
-        list.add("Angel Dust");
-        list.add("Angel Salvadore");
-        list.add("A-Bomb");
-        list.add("Abe");
-        list.add("Abin");
-        list.add("Abomination");
-        list.add("Abraxas");
-        list.add("Absorbing");
-        list.add("Adam");
-        list.add("Agent Bob");
-        list.add("Agent Zero");
-        list.add("Air Walker");
-        list.add("Ajax");
-        list.add("Alan Scott");
-        list.add("Alex Mercer");
-        list.add("Alex Woolsly");
-        list.add("Alfred Pennyworth");
-        list.add("Allan Quartermain");
-        list.add("Amazo");
-        list.add("Ammo Ando");
-        list.add("Masahashi Angel");
-        list.add("Angel Dust");
-        list.add("Angel Salvadore");
+        this.infoList=infoList;
         listener= (HomeItemClickListener) context;
 
     }
@@ -75,14 +36,14 @@ public class HomeRecyclerView extends RecyclerView.Adapter<HomeRecyclerView.ARRe
 
     @Override
     public void onBindViewHolder(ARRecyclerViewHolder holder, int i) {
-        holder.nameTV.setText(list.get(i));
-//        holder.distanceTV.setText(list.get(i));
-        holder.addressTV.setText(list.get(i));
+        holder.nameTV.setText(infoList.get(i).getInfoName());
+        holder.distanceTV.setText(infoList.get(i).getInfoDistance());
+        holder.addressTV.setText(infoList.get(i).getInfoAddress());
     }
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return infoList.size();
     }
 
     static class ARRecyclerViewHolder extends RecyclerView.ViewHolder {

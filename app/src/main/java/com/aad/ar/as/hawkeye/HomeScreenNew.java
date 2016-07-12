@@ -14,6 +14,7 @@ import android.view.View;
 
 import com.aad.ar.as.hawkeye.HawkEyeMap.HawkGoogleMap;
 import com.aad.ar.as.hawkeye.adapters.HomePagerAdapter;
+import com.aad.ar.as.hawkeye.models.Information;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -44,6 +45,7 @@ public class HomeScreenNew extends AppCompatActivity implements OnMapReadyCallba
 //    private YourPagerAdapter mAdapter;
 //    private TabLayout mTabLayout;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +54,7 @@ public class HomeScreenNew extends AppCompatActivity implements OnMapReadyCallba
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-//        mFab = (FloatingActionButton) findViewById(R.id.fab);
+        //        mFab = (FloatingActionButton) findViewById(R.id.fab);
         mAdapter = new HomePagerAdapter(getSupportFragmentManager());
         mPager = (ViewPager) findViewById(R.id.view_pager);
         mPager.setAdapter(mAdapter);
@@ -67,6 +69,11 @@ public class HomeScreenNew extends AppCompatActivity implements OnMapReadyCallba
 
         //Notice how the title is set on the Collapsing Toolbar Layout instead of the Toolbar
 //        mCollapsingToolbarLayout.setTitle(getResources().getString(R.string.app_name));
+
+
+
+
+
     }
 
     @Override
