@@ -26,12 +26,13 @@ dependencies {
     compile 'com.flaviofaria:kenburnsview:1.0.7'
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.16'
     /*compile ('com.github.rubengees:introduction:1.3.2@aar'){
-                transitive = true;
-            }*/
+                    transitive = true;
+                }*/
     //    compile 'com.heinrichreimersoftware:material-intro:1.5.5'
     compile 'com.github.paolorotolo:appintro:4.0.0'
     compile 'com.google.android.gms:play-services-maps:9.0.2'
     compile 'com.android.support:design:23.4.0'
     compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
 }
 

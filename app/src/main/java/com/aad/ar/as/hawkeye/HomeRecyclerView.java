@@ -74,8 +74,10 @@ public class HomeRecyclerView extends RecyclerView.Adapter<HomeRecyclerView.ARRe
     }
 
     @Override
-    public void onBindViewHolder(ARRecyclerViewHolder yourRecyclerViewHolder, int i) {
-        yourRecyclerViewHolder.textView.setText(list.get(i));
+    public void onBindViewHolder(ARRecyclerViewHolder holder, int i) {
+        holder.nameTV.setText(list.get(i));
+//        holder.distanceTV.setText(list.get(i));
+        holder.addressTV.setText(list.get(i));
     }
 
     @Override
@@ -85,11 +87,13 @@ public class HomeRecyclerView extends RecyclerView.Adapter<HomeRecyclerView.ARRe
 
     static class ARRecyclerViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textView;
+        TextView nameTV,distanceTV,addressTV;
 
         public ARRecyclerViewHolder(View itemView) {
             super(itemView);
-            textView = (TextView) itemView.findViewById(R.id.customText);
+            nameTV = (TextView) itemView.findViewById(R.id.homeMapName);
+            distanceTV = (TextView) itemView.findViewById(R.id.homeMapDistance);
+            addressTV = (TextView) itemView.findViewById(R.id.homeMapAddress);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

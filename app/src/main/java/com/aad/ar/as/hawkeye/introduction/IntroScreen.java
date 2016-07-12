@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.aad.ar.as.hawkeye.HawkEyeApplication;
 import com.aad.ar.as.hawkeye.HomeScreen;
+import com.aad.ar.as.hawkeye.HomeScreenNew;
 import com.aad.ar.as.hawkeye.R;
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntro2;
@@ -66,7 +67,7 @@ public class IntroScreen extends AppIntro {
         super.onSkipPressed(currentFragment);
         // Do something when users tap on Skip button.
         completeIntroStatus();
-        startActivity(new Intent(IntroScreen.this, HomeScreen.class));
+        startActivity(new Intent(IntroScreen.this, HomeScreenNew.class));
         this.finish();
     }
 
@@ -75,7 +76,7 @@ public class IntroScreen extends AppIntro {
         super.onDonePressed(currentFragment);
         // Do something when users tap on Done button.
         completeIntroStatus();
-        startActivity(new Intent(IntroScreen.this, HomeScreen.class));
+        startActivity(new Intent(IntroScreen.this, HomeScreenNew.class));
         this.finish();
     }
 
